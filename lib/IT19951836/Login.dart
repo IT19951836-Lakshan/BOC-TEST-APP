@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:testboc/IT19951836/palatte.dart';
 import 'widgets/background-image.dart';
 import 'widgets/text-input.dart';
 import 'widgets/password-input.dart';
 import 'widgets/Rounded-Button.dart';
+import 'widgets/clickable-text.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
@@ -125,15 +125,8 @@ class Login extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 70,vertical: 20),
-                        child:
-                        Text(
-                          "New to online Banking? Register",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black54
-                          ),
-                        ),
+                        padding: const EdgeInsets.symmetric(horizontal:55,vertical:20),
+                        child: ClickableText(),
                       ),
                       FloatingActionButton(
                           onPressed: (){},
