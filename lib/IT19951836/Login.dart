@@ -73,6 +73,7 @@ class Login extends StatelessWidget {
                   height: 30,
                 ),
 
+                //text filed
                 Container(
                   padding: EdgeInsets.symmetric(
                       horizontal: 20,
@@ -97,12 +98,63 @@ class Login extends StatelessWidget {
                       ),
                     ],
                   ),
+
                 ),
 
                 SizedBox(
                   height: 18,
                 ),
 
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Container(
+                      width:350,
+                      decoration: BoxDecoration(
+                        color: Colors.amberAccent,
+                        borderRadius:BorderRadius.circular(14),
+                          boxShadow: [BoxShadow(blurRadius: 5,color: Colors.grey,offset: Offset(0,4))]
+                        ),
+                      child: FlatButton(
+                        onPressed:() {} ,
+                        child: Text(
+                            'Sign In',
+                          style: TextStyle(
+                            fontSize: 18,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 2,vertical: 20),
+                      child: Text(
+                          "Forget Password?",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black54
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 70,vertical: 20),
+                      child: Text(
+                        "New to online Banking? Register",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black54
+                        ),
+                      ),
+                    ),
+                    FloatingActionButton(
+                        onPressed: (){},
+                        backgroundColor: Colors.amberAccent,
+                        child: Icon(
+                          FontAwesomeIcons.phoneAlt,
+                          color: Colors.black,
+                        ),
+                    )
+                  ],
+                ),
               ],
             ),
           ),

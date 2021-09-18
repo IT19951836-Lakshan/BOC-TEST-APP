@@ -29,7 +29,7 @@ class TextInput extends StatelessWidget {
       ),
       child: TextField(
         decoration: InputDecoration(
-            contentPadding: const EdgeInsets.symmetric(vertical: 15),
+            contentPadding: const EdgeInsets.symmetric(vertical: 14),
             border: InputBorder.none,
             hintText: hint,
             prefixIcon: Padding(
