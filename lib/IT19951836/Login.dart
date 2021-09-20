@@ -2,9 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:testboc/IT19951836/palatte.dart';
 import 'widgets/background-image.dart';
-import 'widgets/text-input.dart';
-import 'widgets/password-input.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '';
 
 void main() =>runApp(MaterialApp(
   home: Login() ,
@@ -73,88 +71,79 @@ class Login extends StatelessWidget {
                   height: 30,
                 ),
 
-                //text filed
                 Container(
                   padding: EdgeInsets.symmetric(
                       horizontal: 20,
                   ),
                   child: Column(
                     children: [
-                      TextInput(
-                        icon: FontAwesomeIcons.user,
-                        hint: 'Email',
-                        inputType: TextInputType.emailAddress,
-                        inputAction: TextInputAction.next,
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border.all(
+                            width: 3.0,
+                            color: Colors.amberAccent
+                          ),
+                          borderRadius: BorderRadius.circular(14),
+                            boxShadow: [BoxShadow(blurRadius: 5,color: Colors.grey,offset: Offset(0,4))]
+                        ),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            contentPadding: const EdgeInsets.symmetric(vertical: 15),
+                            border: InputBorder.none,
+                            hintText: 'Email',
+                            prefixIcon: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 20),
+                              child: Icon(
+                                Icons.account_circle_rounded,
+                                color: Colors.grey,
+                              ),
+                            ),
+                            hintStyle: TBodyText
+                          ),
+                        ),
                       ),
 
                       SizedBox(
                         height: 18,
                       ),
 
-                      PasswordInput(
-                        icon: FontAwesomeIcons.lock,
-                        hint: 'Password',
-                        inputAction: TextInputAction.next,
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(
+                                width: 3.0,
+                                color: Colors.amberAccent
+                            ),
+                            borderRadius: BorderRadius.circular(14),
+                            boxShadow: [BoxShadow(blurRadius: 5,color: Colors.grey,offset: Offset(0,4))]
+                        ),
+                        child: TextField(
+                          decoration: InputDecoration(
+                              contentPadding: const EdgeInsets.symmetric(vertical: 15),
+                              border: InputBorder.none,
+                              hintText: 'Password',
+                              prefixIcon: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                child: Icon(
+                                  Icons.password,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              hintStyle: TBodyText
+                          ),
+                        ),
                       ),
                     ],
                   ),
-
                 ),
 
                 SizedBox(
                   height: 18,
                 ),
 
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Container(
-                      width:350,
-                      decoration: BoxDecoration(
-                        color: Colors.amberAccent,
-                        borderRadius:BorderRadius.circular(14),
-                          boxShadow: [BoxShadow(blurRadius: 5,color: Colors.grey,offset: Offset(0,4))]
-                        ),
-                      child: FlatButton(
-                        onPressed:() {} ,
-                        child: Text(
-                            'Sign In',
-                          style: TextStyle(
-                            fontSize: 18,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 2,vertical: 20),
-                      child: Text(
-                          "Forget Password?",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black54
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 70,vertical: 20),
-                      child: Text(
-                        "New to online Banking? Register",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black54
-                        ),
-                      ),
-                    ),
-                    FloatingActionButton(
-                        onPressed: (){},
-                        backgroundColor: Colors.amberAccent,
-                        child: Icon(
-                          FontAwesomeIcons.phoneAlt,
-                          color: Colors.black,
-                        ),
-                    )
-                  ],
-                ),
+
+
               ],
             ),
           ),
@@ -163,4 +152,5 @@ class Login extends StatelessWidget {
     );
   }
 }
+
 
