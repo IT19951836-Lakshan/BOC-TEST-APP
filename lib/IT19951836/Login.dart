@@ -8,10 +8,7 @@ import 'widgets/clickable-text.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
-void main() =>runApp(MaterialApp(
-  home: Login() ,
-  debugShowCheckedModeBanner: false,
-));
+
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
